@@ -7,6 +7,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'second', pathMatch: 'full' },
   { path: 'helloWorld', component: HelloWorldComponent },
   { path: 'second', component: SecondComponent },
+  {
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+  },
 ];
 
 @NgModule({
