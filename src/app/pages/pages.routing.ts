@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'four',
         component: FourComponent,
       },
+      {
+        path: "productManage",
+        loadChildren: () => import("./product-manage/product-manage.module").then(m => m.ProductManageModule),
+      },
     ]
   },
   {  
