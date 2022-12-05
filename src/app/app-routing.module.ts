@@ -4,6 +4,7 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { SecondComponent } from './second/second.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'second', pathMatch: 'full' },
   { path: 'helloWorld', component: HelloWorldComponent },
   { path: 'second', component: SecondComponent },
 ];
